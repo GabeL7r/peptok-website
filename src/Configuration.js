@@ -31,7 +31,7 @@ export default function Configuration( { phoneNumber }) {
     }
 
     const updateSettings = async () => {
-        await axios.post(`${settings.apiUrl}/subscribe?phone_number=${phoneNumber}&categories=${userCategories.join(',')}`, { headers })
+        await axios.post(`${settings.apiUrl}/subscribe?phone_number=${phoneNumber}&categories=${userCategories.join(',')}`, {}, { headers })
     }
 
     return (
