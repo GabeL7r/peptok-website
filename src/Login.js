@@ -1,6 +1,7 @@
 import { Button, TextField, Grid } from "@mui/material"
 import { useState } from 'react';
 import axios from 'axios'
+import settings from "./settings"
 
 export default function Login({ login }) {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -9,15 +10,16 @@ export default function Login({ login }) {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        //const response = await axios.get(`http://localhost:8000/login?phone_number${phoneNumber}`);
+        await axios.get(`${settings.apiUrl}/login?phone_number=${phoneNumber}`);
         setSentOTP(true)
     };
 
     const handleOTP = async e => {
         e.preventDefault();
         try {
-            //const response = await axios.get(`http://localhost:8000/login?phone_number${phoneNumber}&otp=${otp}`);
-            login(true)
+            let response = await axios.get(`${settings.apiUrl}/verify?phone_number=${phoneNumber}&otp=${otp}`);
+            localStorage.setItem("jwt", response.data.message)
+            login(phoneNumber)
         } catch (e) {
             setSentOTP(false)
             setPhoneNumber("")
