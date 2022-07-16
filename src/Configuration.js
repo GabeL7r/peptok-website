@@ -44,6 +44,8 @@ export default function Configuration( { phoneNumber }) {
         <Button style={{marginTop: '20px'}} variant="contained" onClick={updateSettings}>
             Update
         </Button>
+
+        <p style={{fontSize: '14px', position: 'fixed', bottom: '10px'}}>We hope you enjoy Peptok and that it helps to brighten your day. If this is the case, please consider providing a <a target="_blank" href="https://buy.stripe.com/5kAeVtc7Baju79CfZ0">donation</a> so we can continue to provide this service.</p>
         </>
     )
 }

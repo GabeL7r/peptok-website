@@ -6,7 +6,7 @@ import settings from "./settings"
 export default function Login({ login }) {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [otp, setOTP] = useState('');
-    const [sentOTP, setSentOTP] = useState(false);
+    const [sentOTP, setSentOTP] = useState(true);
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -42,6 +42,7 @@ export default function Login({ login }) {
                                 label="Phone Number"
                                 variant="filled"
                                 value={phoneNumber}
+                                helperText="Enter your phone number including area code."
                                 onChange={e => setPhoneNumber(e.target.value)}
                                 required />
                         </Grid>
@@ -67,6 +68,7 @@ export default function Login({ login }) {
                                 variant="filled"
                                 defaultValue=""
                                 value={otp}
+                                helperText="Enter the Secure Code you just recieved as a text message"
                                 onChange={e => setOTP(e.target.value)}
                                 required />
                         </Grid>
