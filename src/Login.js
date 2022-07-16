@@ -33,6 +33,8 @@ export default function Login({ login }) {
                 <p>
                     Change Your Narrative
                 </p>
+                <img style={{ height: '50%', left: '75%', position: 'absolute', transform: 'rotate(20deg)'}} src={require('./chat1.png')} />
+                <img style={{ height: '50%', right: '75%', position: 'absolute', transform: 'rotate(-20deg)'}} src={require('./chat2.png')} />
                 <form style={{marginTop: '50px'}} onSubmit={handleSubmit}>
                     <Grid container>
                         <Grid item xs={12}>
