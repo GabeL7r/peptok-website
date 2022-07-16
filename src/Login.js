@@ -6,7 +6,7 @@ import settings from "./settings"
 export default function Login({ login }) {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [otp, setOTP] = useState('');
-    const [sentOTP, setSentOTP] = useState(true);
+    const [sentOTP, setSentOTP] = useState(false);
 
     const handleSubmit = async e => {
         e.preventDefault();
