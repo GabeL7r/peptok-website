@@ -20,7 +20,7 @@ export default function Login({ login }) {
         try {
             let response = await axios.get(`${settings.apiUrl}/verify?phone_number=${countryCode + phoneNumber}&otp=${otp}`);
             localStorage.setItem("jwt", response.data.message)
-            login(phoneNumber)
+            login(countryCode + phoneNumber)
         } catch (e) {
             setSentOTP(false)
             setPhoneNumber("")
