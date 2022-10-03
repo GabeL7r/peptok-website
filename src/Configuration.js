@@ -74,7 +74,7 @@ export default function Configuration({ phoneNumber }) {
                 Update
             </Button>
 
-            <div style={{ fontSize: '14px', position: 'fixed', bottom: '10px' }}>
+            <div style={{ fontSize: '14px', bottom: '10px', marginTop: '30px' }}>
                 <p >We hope you enjoy Peptok and that it helps to brighten your day!</p>
                 <br></br>
                 <p>If so, please help us by doing any of the following:</p>
